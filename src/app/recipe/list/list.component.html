@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12 mt-2">
+        <div class="d-flex flex-column" *ngFor="let recipe of recipes">
+            <recipe-item name="{{recipe.name}}" description="{{recipe.description}}" imagePath="{{recipe.imagePath}}"></recipe-item>
+        </div>
+    </div>
+</div>
