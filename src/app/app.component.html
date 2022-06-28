@@ -1,10 +1,9 @@
-<app-header></app-header>
+<app-header (currentPage)="changePage($event)"></app-header>
 <div class="container-fluid">
   <main class="mt-5">
-    <h1 class="">Foodie from the Multiverse</h1>
     <section>
-      <app-recipes></app-recipes>
-      <shopping-list></shopping-list>
+      <app-recipes *ngIf="currentPage === 'recipes'"></app-recipes>
+      <shopping-list *ngIf="currentPage === 'shopping'"></shopping-list>
     </section>
   </main>
 </div>

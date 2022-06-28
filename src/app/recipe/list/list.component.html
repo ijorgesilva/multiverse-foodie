@@ -6,8 +6,13 @@
 <hr>
 <div class="row">
     <div class="col-xs-12 mt-2">
-        <div class="d-flex flex-column" *ngFor="let recipe of recipes">
-            <recipe-item name="{{recipe.name}}" description="{{recipe.description}}" imagePath="{{recipe.imagePath}}"></recipe-item>
+        <div class="d-flex flex-column" >
+            <recipe-item 
+                *ngFor="let recipeElement of recipes"
+                [recipe]="recipeElement"
+                (currentRecipe)="onSelectRecipe(recipeElement)"
+            >
+            </recipe-item>
         </div>
     </div>
 </div>

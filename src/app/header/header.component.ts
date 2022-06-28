@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core'
 
 @Component({
     selector: 'app-header',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core'
 })
 
 export class AppHeader{
+    @Output() currentPage = new EventEmitter<string>()
     constructor(){}
+
+    onNavigate(page: string){
+        this.currentPage.emit(page)
+    }
 }

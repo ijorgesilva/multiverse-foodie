@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  currentPage: string = 'recipes'
   title = 'shopping-recipe';
+
+  changePage(page: string){
+    this.currentPage = page
+    console.log(this.currentPage)
+  }
 }

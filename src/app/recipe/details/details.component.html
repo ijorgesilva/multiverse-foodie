@@ -1,7 +1,7 @@
 <div class="pt-2 pb-4 mb-2 bg-light">
-    <img src="" alt="" class="img-responsive">
+    <img [src]="recipe.imagePath" alt="" class="img-responsive">
     <div class="container-fluid">
-        <h2 class="fw-bold">Recipe name</h2>
+        <h2 class="fw-bold">{{ recipe.name }}</h2>
         <div class="dropdown">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage
@@ -15,8 +15,8 @@
         <hr>
         <div class="row">
             <div class="col-xs-12">
-                <h4>Description</h4>
-                <p>Lorem ipsum sit amet</p>
+                <h4>{{recipe.name}}</h4>
+                <p>{{recipe.description}}</p>
             </div>
         </div>
     </div>
